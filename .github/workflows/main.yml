@@ -51,5 +51,6 @@ jobs:
          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/clang-r346389c/lib64/
          export ARCH=arm64
          export SUBARCH=arm64
-         make $KERNEL_CMDLINE ALP_kirin970_ksu_defconfig
-         make $KERNEL_CMDLINE -j$(nproc --all)
+         export CROSS_COMPILE=aarch64-linux-android- 
+         make ARCH=arm64 O=out ALP_kirin970_ksu_defconfig
+         make ARCH=arm64 O=out -j$(nproc --all)
