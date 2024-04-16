@@ -46,11 +46,9 @@ jobs:
           echo "No Config,good."
          fi
 
-         export PATH=$(pwd)/clang-r346389c/bin/:$PATH=$(pwd)/gcc4.9/bin
+         export PATH=$(pwd)/clang-r346389c/bin/
          export CLANG_PREBUILTS_PATH=$(pwd)/clang-r346389c/
-         export CLANG_PREBUILTS_PATH=$(pwd)/gcc4.9
          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/clang-r346389c/lib64/
-         export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/gcc4.9/lib/
          export ARCH=arm64
          export SUBARCH=arm64
          export CROSS_COMPILE=aarch64-linux-android- 
