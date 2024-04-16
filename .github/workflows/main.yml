@@ -54,5 +54,5 @@ jobs:
          export ARCH=arm64
          export SUBARCH=arm64
          export CROSS_COMPILE=aarch64-linux-android- 
-         make ARCH=arm64 O=out ALP_kirin970_ksu_defconfig
-         make ARCH=arm64 O=out -j$(nproc --all)
+         make ARCH=arm64 O=out CC="ccache clang" ALP_kirin970_ksu_defconfig
+         make ARCH=arm64 O=out CC="ccache clang" -j$(nproc --all)
