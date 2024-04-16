@@ -19,7 +19,7 @@ jobs:
       CCACHE_NOHASHDIR: "true"
       CCACHE_MAXSIZE: "8G"
       CCACHE_HARDLINK: "true"
-      KERNEL_CMDLINE: "ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- O=out"
+      KERNEL_CMDLINE: "  export CROSS_COMPILE=aarch64-linux-android- O=out"
     steps:
     
 
