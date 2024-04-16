@@ -46,8 +46,6 @@ jobs:
           echo "No Config,good."
          fi
 
-         rm -rf KernelSU
-         rm -rf drivers/kernelsu
          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.9.2
          export PATH=$(pwd)/clang-r346389c/bin/:$PATH
          export CLANG_PREBUILTS_PATH=$(pwd)/clang-r346389c/
