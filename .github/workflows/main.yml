@@ -17,7 +17,7 @@ jobs:
     env:
       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion"
       CCACHE_NOHASHDIR: "true"
-      CCACHE_MAXSIZE: "4G"
+      CCACHE_MAXSIZE: "8G"
       CCACHE_HARDLINK: "true"
       KERNEL_CMDLINE: "ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- O=out"
     steps:
@@ -51,5 +51,5 @@ jobs:
          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/clang-r346389c/lib64/
          export ARCH=arm64
          export SUBARCH=arm64
-         make $KERNEL_CMDLINE merge_kirin970_defconfig
+         make $KERNEL_CMDLINE ALP_kirin970_ksu_defconfig
          make $KERNEL_CMDLINE -j$(nproc --all)
